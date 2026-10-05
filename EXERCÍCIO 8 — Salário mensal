@@ -1,0 +1,31 @@
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+    float horas, valorHora, salario; 
+
+  
+
+    printf("Digite as horas trabalhadas: "); 
+
+    scanf("%f", &horas); 
+
+    printf("Digite o valor por hora: "); 
+
+    scanf("%f", &valorHora); 
+
+  
+
+    salario = horas * valorHora; 
+
+  
+
+    printf("Salário bruto: R$ %.2f\n", salario); 
+
+  
+
+    return 0; 
+
+} 
