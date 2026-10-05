@@ -1,0 +1,51 @@
+ 
+
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+    int i, aprovados = 0, reprovados = 0; 
+
+    float nota, percentual; 
+
+  
+
+    for (i = 1; i <= 10; i++) { 
+
+        printf("Digite a nota do aluno %d: ", i); 
+
+        scanf("%f", &nota); 
+
+  
+
+        if (nota >= 7) { 
+
+            aprovados = aprovados + 1; 
+
+        } else { 
+
+            reprovados = reprovados + 1; 
+
+        } 
+
+    } 
+
+  
+
+    percentual = aprovados * 100.0 / 10; 
+
+  
+
+    printf("Aprovados: %d\n", aprovados); 
+
+    printf("Reprovados: %d\n", reprovados); 
+
+    printf("Percentual de aprovação: %.1f%%\n", percentual); 
+
+  
+
+    return 0; 
+
+} 
