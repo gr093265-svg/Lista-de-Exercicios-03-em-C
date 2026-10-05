@@ -1,0 +1,79 @@
+#include <stdio.h> 
+
+  
+
+int main() { 
+
+    char produto[50], opcao; 
+
+    int quantidade, qtdVendas = 0, totalProdutos = 0; 
+
+    float preco, totalVenda, faturamento = 0, maiorVenda = 0; 
+
+  
+
+    printf("Deseja registrar uma venda? (S/N): "); 
+
+    scanf(" %c", &opcao); 
+
+  
+
+    while (opcao == 'S' || opcao == 's') { 
+
+        printf("Digite o nome do produto: "); 
+
+        scanf("%s", produto); 
+
+        printf("Digite a quantidade: "); 
+
+        scanf("%d", &quantidade); 
+
+        printf("Digite o preço unitário: "); 
+
+        scanf("%f", &preco); 
+
+  
+
+        totalVenda = quantidade * preco; 
+
+        printf("Total da venda: R$ %.2f\n", totalVenda); 
+
+  
+
+        qtdVendas = qtdVendas + 1; 
+
+        totalProdutos = totalProdutos + quantidade; 
+
+        faturamento = faturamento + totalVenda; 
+
+  
+
+        if (totalVenda > maiorVenda) { 
+
+            maiorVenda = totalVenda; 
+
+        } 
+
+  
+
+        printf("Deseja registrar outra venda? (S/N): "); 
+
+        scanf(" %c", &opcao); 
+
+    } 
+
+  
+
+    printf("Vendas realizadas: %d\n", qtdVendas); 
+
+    printf("Total de produtos vendidos: %d\n", totalProdutos); 
+
+    printf("Faturamento total: R$ %.2f\n", faturamento); 
+
+    printf("Maior venda: R$ %.2f\n", maiorVenda); 
+
+  
+
+    return 0; 
+
+} 
